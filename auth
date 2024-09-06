@@ -1,0 +1,28 @@
+import tkinter as tk
+authed = [["theo","test"],["kpulsford","test2"]]
+
+window = tk.Tk()
+
+
+def auth():
+    for i in authed:
+        if inp1.get() in i:
+            if i[1] == inp2.get():
+                print("AUTHED")
+    
+
+window.title("Currency Converter")
+window.geometry("300x100")
+title = tk.Label(window, text="Enter user/pass.")
+inp1 = tk.Entry(window)
+inp2 = tk.Entry(window)
+button = tk.Button(window, text="Convert!", command=auth)
+title.pack()
+inp1.pack()
+inp2.pack()
+button.pack()
+
+
+
+
+window.mainloop()
